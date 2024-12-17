@@ -31,4 +31,4 @@ export const apiSlice = createApi({
 });
 
 // export
-export const { useGetVideosQuery, useGetVideoQuery, useGetRelatedVideoQuery } = apiSlice;
+export const { useGetVideosQuery, useGetVideoQuery, useGetRelatedVideoQuery, useAddVideoMutation } = apiSlice;
