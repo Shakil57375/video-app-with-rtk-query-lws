@@ -5,7 +5,7 @@ import Video from "./Video.jsx";
 
 export default function Videos() {
   // Fetching data with a custom hook
-  const { data: videos, isLoading, isError } = useGetVideosQuery();
+  const { data: videos, isLoading, isError,  } = useGetVideosQuery();
 
   // Debugging to see what data is fetched
   console.log('Fetched videos:', videos);
