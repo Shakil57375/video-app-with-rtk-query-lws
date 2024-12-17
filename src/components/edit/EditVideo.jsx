@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useGetVideoQuery } from "../../features/api/apiSlice";
 import Error from "../ui/Error";
-import Form from "../add/Form";
+import Form from "./Form";
 
 export default function EditVideo() {
   const { videoId } = useParams();
