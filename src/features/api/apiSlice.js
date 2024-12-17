@@ -5,12 +5,20 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3000", // Ensure this URL is correct and server is running
   }),
+  tagTypes: ["videos"],
   endpoints: (builder) => ({
     getVideos: builder.query({
-      query: () => "/videos", // This should fetch from http://localhost:9000/videos
+      query: () => ({
+        url: "/videos",
+        method: "GET",
+      }),
+      providesTags: ["videos"]
     }),
     getVideo: builder.query({
-      query: (videoId) => `/videos/${videoId}`,
+      query: (videoId) => ({
+        url: `/videos/${videoId}`,
+        method: "GET",
+      }),
     }),
     getRelatedVideo: builder.query({
       query: ({ id, title }) => {
@@ -26,6 +34,7 @@ export const apiSlice = createApi({
         method: "POST",
         body: data,
       }),
+      invalidatesTags: ["videos"],
     })
   }),
 });
