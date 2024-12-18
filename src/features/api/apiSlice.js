@@ -5,7 +5,7 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3000", // Ensure this URL is correct and server is running
   }),
-  tagTypes: ["Videos", "Video", "RelatedVideos"],
+  tagTypes: ["Videos", "Video",  "RelatedVideos"],
   endpoints: (builder) => ({
     getVideos: builder.query({
       query: () => ({
