@@ -7,7 +7,7 @@ export const apiSlice = createApi({
   }),
   endpoints: (builder) => ({
     getVideos: builder.query({
-      query: () => "/videos", // This should fetch from http://localhost:9000/videos
+      query: () => "/videos", //  This should fetch from http://localhost:9000/videos
     }),
     getVideo: builder.query({
       query: (videoId) => `/videos/${videoId}`,
